@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import Cart from './Cart';
 import Nav from './Nav';
+import Search from './Search';
 
 const Logo = styled.h1`
   background: red;
@@ -29,7 +30,7 @@ const HeaderStyles = styled.header`
   .sub-bar {
     border-bottom: 1px solid var(--black, black);
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
   }
 `;
 
@@ -43,7 +44,7 @@ export default function Header() {
         <Nav />
       </div>
       <div className="sub-bar">
-        <p> Search</p>
+        <Search />
       </div>
       <Cart />
     </HeaderStyles>
